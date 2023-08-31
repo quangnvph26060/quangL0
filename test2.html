@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Căn giữa các hàng */
+}
+
+.product {
+  flex-basis: calc(25% - 20px); /* Điều chỉnh kích thước sản phẩm theo ý muốn */
+  margin: 10px; /* Khoảng cách giữa các sản phẩm */
+}
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  
+  color: rgb(255, 0, 0);
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+    </style>
+</head>
+
+<body>
+  
+  <span class="button">Click me!</span>
+    <div class="container">
+        
+       
+       
+        <div class="product">Sản phẩm 1</div>
+        <div class="product">Sản phẩm 2</div>
+        <div class="product">Sản phẩm 3</div>
+        <div class="product">Sản phẩm 4</div>
+        <div class="product">Sản phẩm 5</div>
+        <div class="product">Sản phẩm 6</div>
+    </div>
+    <!-- Các sản phẩm tiếp theo -->
+</body>
+
+</html>
