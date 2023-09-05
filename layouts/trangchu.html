@@ -19,7 +19,7 @@
     <div class="banner">
         <div class="menu">
 
-            <div class="menu_navbar">
+            <div class="menu_navbar" style="margin-top: 10px;">
                 <label class="logo">
                     <img src="../images/background-remover (1)/logo.png" alt="" width="48px">
                     <strong>Go<span style="color: #D16B7D;">grin</span>.</strong>
@@ -28,13 +28,22 @@
 
             <div class="menu_navbar">
                 <div>
-
+                    <label for="checks" class="checkbtn1 iconcart">
+                        <a href="#">
+                            <i class="fas fa-search "></i>
+                        </a>
+                        <div class="cart-icon">
+                            <a href="1">
+                                <i class="fas fa-cart-plus sign-giohang"></i>
+                                <span class="item-count">3</span>
+                            </a>
+                        </div>
+                    </label>
                     <input type="checkbox" id="check">
                     <label for="check" class="checkbtn">
-                        <i class="fas fa-search "></i>
-                        <i class="fas fa-shopping-cart shopping"></i>
                         <i class="fas fa-bars"></i>
                     </label>
+                   
                     <ul>
                         <li><a href="trangchu.html" class="active">Home</a></li>
                         <li><a href="#">About</a></li>
@@ -49,10 +58,14 @@
                 </div>
 
             </div>
-            <div class="menu_navbar unmenu">
+            <div class="menu_navbar unmenu" style="margin-top: 20px;">
                 <div class="menu_navbar_right">
-                    <i class="fas fa-search sign-kinhlup"></i>
-                    <i class="fas fa-shopping-cart"></i>
+                    <a href="#"> <i class="fas fa-search sign-kinhlup"></i></a>
+                    <div class="cart-icon">
+                        <a href="#1">
+                            <i class="fas fa-cart-plus sign-giohang"></i>
+                            <span class="item-count">3</span></a>
+                    </div>
                     <button class="sign-button">24/7 Help</button>
                 </div>
             </div>
@@ -75,7 +88,7 @@
                     </h1>
                     <h1>
                         <strong
-                            style="font-family: 'Roboto', sans-serif;color: #333333;text-shadow: 4px -1px 0px #D16B7D;">S</strong><strong
+                            style="font-weight: lighter;color: #333333;text-shadow: 4px -1px 0px #D16B7D;">S</strong><strong
                             style="font-weight: lighter;color: #D16B7D;text-shadow: 4px -1px 0px #333333;">H</strong><strong
                             style="font-weight: lighter;color: #333333;text-shadow: 4px -1px 0px #D16B7D;">O</strong><strong
                             style="font-weight: lighter;color: #D16B7D;text-shadow: 4px -1px 0px #333333;">P</strong>
@@ -131,7 +144,7 @@
     <!-- <img src="../images/bannerhoa.jpg" alt="" width="100%" class="bannerhoa" height="auto"> -->
     <div class="barn">
         <div class="barnbox">
-            <div class="box">
+            <div class="box " id="box_sp">
                 <div>
                     <i class="fas fa-headphones"></i>
                 </div>
@@ -172,26 +185,10 @@
             </div>
         </div>
 
-        <script>
 
-            window.addEventListener('resize', function () {
-                var boxElements = document.querySelectorAll('.box');
-                var screenWidth = window.innerWidth;
-
-                if (screenWidth <= 768) {
-                    boxElements.forEach(function (element) {
-                        element.style.marginTop = '0';
-                    });
-                } else {
-                    boxElements.forEach(function (element) {
-                        element.style.marginTop = '80px';
-                    });
-                }
-            });
-        </script>
         <div class="content_box">
             <div class="content_box_title">
-                <img src="../images/logo1.jpg" alt="" width="60px" class="content_box_img">
+                <img src="../images/logo1.png" alt="" width="60px" class="content_box_img">
                 <p class="content_box_p" style="font-weight: 800;">Trending <strong
                         style="color: #D16B7D;">Flowers</strong></p>
             </div>
@@ -368,79 +365,6 @@
 
         </div>
         <div class="boxflex">
-            <!-- <div class="box_hoa">
-                <div class="product_img">
-                    <img src="../images/background-remover/lohoa.png" alt="">
-                    <div class="overlay">
-                        <div class="text">
-                            <a href=""><i class="fa fa-heart"></i></a>
-                            <a href=""><i class='fas fa-shopping-cart shopping'></i></a>
-                            <a href=""> <i class="fa fa-eye"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="product_info">
-                    <p class="product_name">Yellow rose flower </p>
-                    <p class="product_price"><span style="text-decoration: line-through;opacity: 0.5;">$19</span>
-                        $17</p>
-                </div>
-            </div>
-            <div class="box_hoa">
-                <div class="product_img">
-                    <img src="../images/background-remover/p1.jpg" alt="">
-                    <div class="product_sale">
-                        SALE!
-                    </div>
-                    <div class="overlay">
-                        <div class="text">
-                            <a href=""><i class="fa fa-heart"></i></a>
-                            <a href=""><i class='fas fa-shopping-cart'></i></a>
-                            <a href=""> <i class="fa fa-eye"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="product_info">
-                    <p class="product_name">Flower in glash </p>
-                    <p class="product_price">$15</p>
-                </div>
-
-            </div>
-            <div class="box_hoa">
-                <div class="product_img">
-                    <img src="../images/background-remover/transparent.png" alt="">
-                    <div class="overlay">
-                        <div class="text">
-                            <a href=""><i class="fa fa-heart"></i></a>
-                            <a href=""><i class='fas fa-shopping-cart'></i></a>
-                            <a href=""> <i class="fa fa-eye"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="product_info">
-                    <p class="product_name">Beautiful rose flower </p>
-                    <p class="product_price"><span style="text-decoration: line-through;opacity: 0.5">$33</span> $31
-                    </p>
-                </div>
-            </div>
-            <div class="box_hoa">
-                <div class="product_img">
-                    <img src="../images/background-remover/lohoa.png" alt="">
-                    <div class="product_sale">
-                        SALE!
-                    </div>
-                    <div class="overlay">
-                        <div class="text">
-                            <a href=""><i class="fa fa-heart"></i></a>
-                            <a href=""><i class='fas fa-shopping-cart'></i></a>
-                            <a href=""> <i class="fa fa-eye"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="product_info">
-                    <p class="product_name">Beautiful rose flower </p>
-                    <p class="product_price">$22</p>
-                </div>
-            </div> -->
             <div class="box_hoa">
                 <div class="product_img">
                     <img src="../images/background-remover/lohoa.png" alt="">
@@ -523,10 +447,11 @@
             <img src="../images/background-remover/img_avatar.png" alt="Avatar" class="avatar">
             <div class="content_avatar">
                 <p class="content_up">Gogrin flower shop is really amezing there fresh flower & servicers. i </p>
-                <p>always pray a lot for there big success</p>
+                <p style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">always pray a lot for
+                    there big success</p>
                 <p style="line-height: 40px;"><strong
-                        style="color: #D16B7D;font-family: 'Poppins', sans-serif;font-size: 1vw;">Rakib hossain...
-                    </strong><strong style="font-size: 1.3vw;">Manager</strong></p>
+                        style="color: #D16B7D;font-family: 'Poppins', sans-serif;font-size: 15px;">Rakib hossain...
+                    </strong><strong style="font-size: 15px;">Manager</strong></p>
             </div>
         </div>
         <div class="shop_shopping">
@@ -720,7 +645,81 @@
                     </div>
                 </div>
             </div>
-
+            <div class="slides_prodcuts">
+                <div class="product_hoa">
+                    <div class="product_img">
+                        <img src="../images/background-remover/lohoa.png" alt="">
+                        <div class="overlay">
+                            <div class="text">
+                                <a href=""><i class="fa fa-heart"></i></a>
+                                <a href=""><i class='fas fa-shopping-cart'></i></a>
+                                <a href=""> <i class="fa fa-eye"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_info">
+                        <p class="product_name">Yellow rose flower </p>
+                        <p class="product_price"><span style="text-decoration: line-through;opacity: 0.5;">$19</span>
+                            $17</p>
+                    </div>
+                </div>
+                <div class="product_hoa">
+                    <div class="product_img">
+                        <img src="../images/background-remover/p1.jpg" alt="">
+                        <div class="product_sale">
+                            SALE!
+                        </div>
+                        <div class="overlay">
+                            <div class="text">
+                                <a href=""><i class="fa fa-heart"></i></a>
+                                <a href=""><i class='fas fa-shopping-cart'></i></a>
+                                <a href=""> <i class="fa fa-eye"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_info">
+                        <p class="product_name">Flower in glash </p>
+                        <p class="product_price">$15</p>
+                    </div>
+                </div>
+                <div class="product_hoa">
+                    <div class="product_img">
+                        <img src="../images/background-remover/transparent.png" alt="">
+                        <div class="overlay">
+                            <div class="text">
+                                <a href=""><i class="fa fa-heart"></i></a>
+                                <a href=""><i class='fas fa-shopping-cart'></i></a>
+                                <a href=""> <i class="fa fa-eye"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_info">
+                        <p class="product_name">Beautiful rose flower </p>
+                        <p class="product_price"><span style="text-decoration: line-through;opacity: 0.5">$33</span> $31
+                        </p>
+                    </div>
+                </div>
+                <div class="product_hoa">
+                    <div class="product_img">
+                        <img src="../images/pro.jpg" alt="">
+                        <div class="product_sale">
+                            SALE!
+                        </div>
+                        <div class="overlay">
+                            <div class="text">
+                                <a href=""><i class="fa fa-heart"></i></a>
+                                <a href=""><i class='fas fa-shopping-cart'></i></a>
+                                <a href=""> <i class="fa fa-eye"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_info">
+                        <p class="product_name">Yellow rose flower </p>
+                        <p class="product_price"><span style="text-decoration: line-through;opacity: 0.5;">$19</span>
+                            $17</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
@@ -737,11 +736,7 @@
                     going to be playing them for reset of my life. They have to a
                     certain caliber connect with me </p>
                 <p style="line-height: 30px ; color: #D16B7D;">Learn More...</p>
-                <p style=" border: none;
-                border-top: 1px dashed black;
-                width: 55%;
-                float: right ;
-                line-height: 40px;">
+                <p class="main2">
                     <span><i class='fas fa-award' style="color: #0ED678;margin-right: 10px;"></i></span> We provide
                     always fresh & beautiful flower <br>
 
@@ -961,7 +956,7 @@
     </footer>
     <script src="../js/jsflie.js"></script>
     <script src="../js/slider.js"></script>
-
+    <script src="../js/overflow.js"></script>
 </body>
 
 </html>

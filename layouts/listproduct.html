@@ -17,7 +17,7 @@
     <div class="banner">
         <div class="menu">
 
-            <div class="menu_navbar">
+            <div class="menu_navbar" style="margin-top: 10px;">
                 <label class="logo">
                     <img src="../images/background-remover (1)/logo.png" alt="" width="48px">
                     <strong>Go<span style="color: #D16B7D;">grin</span>.</strong>
@@ -26,11 +26,19 @@
 
             <div class="menu_navbar">
                 <div>
-
+                    <label for="checks" class="checkbtn1 iconcart">
+                        <a href="#">
+                            <i class="fas fa-search "></i>
+                        </a>
+                        <div class="cart-icon">
+                            <a href="1">
+                                <i class="fas fa-cart-plus sign-giohang"></i>
+                                <span class="item-count">3</span>
+                            </a>
+                        </div>
+                    </label>
                     <input type="checkbox" id="check">
                     <label for="check" class="checkbtn">
-                        <i class="fas fa-search "></i>
-                        <i class="fas fa-shopping-cart"></i>
                         <i class="fas fa-bars"></i>
                     </label>
                     <ul>
@@ -49,10 +57,14 @@
                 </div>
 
             </div>
-            <div class="menu_navbar unmenu">
+            <div class="menu_navbar unmenu" style="margin-top: 20px;">
                 <div class="menu_navbar_right">
                     <i class="fas fa-search sign-kinhlup"></i>
-                    <i class="fas fa-shopping-cart"></i>
+                    <div class="cart-icon">
+                        <a href="#">
+                            <i class="fas fa-cart-plus sign-giohang"></i>
+                            <span class="item-count">3</span></a>
+                    </div>
                     <button class="sign-button">24/7 Help</button>
                 </div>
             </div>
@@ -342,6 +354,7 @@
             </div>
         </div>
     </footer>
+    <script src="../js/overflow.js"></script>
 </body>
 
 </html>

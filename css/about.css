@@ -21,10 +21,31 @@
     grid-template-columns: 1fr 2fr 1fr;
 }
 
-.menu_navbar {
+.shopping {
+    padding: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     padding: 10px;
+
+    border-radius: 50%;
+}
+
+.menu_navbar div {
+    margin-top: 15px;
+}
+
+.menu_navbar {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
     text-align: center;
+}
+
+.fa-bars {
+    margin-bottom: 10px;
 }
 
 .checkbtn {
@@ -32,7 +53,18 @@
     color: rgb(255, 0, 0);
     float: right;
     line-height: 80px;
-    margin-left: 40px;
+    padding: 5px;
+    margin-left: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.checkbtn1 {
+    font-size: 30px;
+    color: rgb(255, 0, 0);
+    float: right;
+
+    margin-left: 10px;
     cursor: pointer;
     display: none;
 }
@@ -58,12 +90,16 @@ div ul li {
 }
 
 .menu_con li a {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
     color: black;
 }
 
 div ul li a {
     color: rgb(0, 0, 0);
     font-size: 17px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 
 }
 
@@ -80,6 +116,10 @@ a:hover {
         flex-wrap: wrap;
         display: flex;
         justify-content: center;
+    }
+
+    .menu_navbar div {
+        margin-top: 0px;
     }
 
     .box {
@@ -120,15 +160,18 @@ a:hover {
     }
 
     .checkbtn {
+        display: flex;
+        align-content: center;
+        justify-content: center;
         line-height: 0;
     }
 
-    .checkbtn .fa-search {
+    .checkbtn1 .fa-search {
         border-radius: 50%;
 
         background-color: #D16B7D;
         color: white;
-        padding: 8px;
+        padding: 4px;
     }
 
     .menubt {
@@ -140,6 +183,15 @@ a:hover {
     }
 
     .checkbtn {
+        margin-left: 10px;
+        margin-top: 14px;
+        display: block;
+        float: left;
+
+    }
+
+    .checkbtn1 {
+        margin-top: 10px;
         display: block;
         float: left;
     }
@@ -177,7 +229,7 @@ a:hover {
     #check:checked~ul {
         left: 0;
         z-index: 9999;
-
+        
     }
 }
 
@@ -204,17 +256,20 @@ label.logo {
     display: flex;
     justify-content: start;
 
-    margin: 20px;
-    margin-right: 30px;
+    /* margin: 20px;
+    margin-right: 30px; */
 }
 
-.sign-kinhlup {
-
+.fa-search.sign-kinhlup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
-
     background-color: #D16B7D;
     color: white;
-    padding: 10px;
+    width: 40px;
+    height: 40px;
+
 }
 
 .fa-shopping-cart:hover {
@@ -246,9 +301,17 @@ label.logo {
     margin-right: 10px;
 }
 
+.menu_navbar div>*:not(:last-child) {
+    margin-right: 10px;
+}
+
 /* about đầu tiên */
 
 @media(max-width:925px) {
+    .logo_six {
+        flex-wrap: wrap;
+    }
+
     .about_one {
 
         padding: 0 20px;
@@ -322,7 +385,7 @@ label.logo {
 }
 
 .about_one_contact_img {
-    width: 410px;
+    width: 100%;
     height: 500px;
     background-image: url('../images/banner3.jpg');
 
@@ -379,12 +442,14 @@ label.logo {
 
 .about_one_contact_text h1 {
     line-height: 40px;
-    font-size: 40px;
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
 
 .about_one_contact_text p {
     line-height: normal;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .about_one_contact_text span {
@@ -392,7 +457,7 @@ label.logo {
 }
 
 .about_one_contact {
-    line-height: 70px;
+    line-height: 40px;
 }
 
 /* tiếp theo các icon */
@@ -480,7 +545,7 @@ label.logo {
 
 .showing_one {
     width: 65%;
-    height: 100px;
+    height: auto;
 
     display: flex;
     justify-content: space-evenly;
@@ -490,7 +555,7 @@ label.logo {
 .showing_a {
 
     width: 460px;
-    height: auto;
+    height: 100px;
 
 
 
@@ -502,27 +567,35 @@ label.logo {
 }
 
 .content_box_p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 30px;
     top: 30%;
-    left: 5%;
+    left: 2%;
     position: relative;
+
 }
 
-.menu_title {
+#myBtnContainer {
     top: 40%;
-    left: 5%;
+    left: 7%;
     position: relative;
 }
 
 
 @media screen and (max-width: 768px) {
+    .content_box_img {
+        position: absolute;
+
+    }
+
     .showing_a {
+        height: 70px;
         flex-direction: column;
         align-items: center;
         flex-wrap: wrap;
     }
 
-    .menu_title {
+    #myBtnContainer {
 
         position: relative;
     }
@@ -531,15 +604,12 @@ label.logo {
         flex-wrap: wrap;
     }
 
-    .content_box_img {
-        width: 50px;
-        position: absolute;
-    }
+
 
     .show_menu {
-        display: flex;
-        align-content: center;
-        justify-content: center;
+        /* display: flex;
+        align-content: center; */
+        flex-wrap: wrap;
     }
 }
 
@@ -566,13 +636,13 @@ label.logo {
     border: 1px solid #ccc;
 }
 
-.menu_title span {
+#myBtnContainer span {
     margin: 20px;
 }
 
 /* các sản phẩm  */
 .product_sort {
-
+   
     margin-top: 20px;
     display: flex;
     justify-content: center;
@@ -582,13 +652,14 @@ label.logo {
 }
 
 .product_sort_con {
-
+   
     justify-content: center;
     margin: 5px;
     display: flex;
     flex-wrap: wrap;
 
     width: 69%;
+
 
 }
 
@@ -598,19 +669,23 @@ label.logo {
     display: flex;
     justify-content: space-between;
     width: 210px;
-
+    display: none;
     height: 260px;
     border: 1px solid #ccc;
 }
 
-
+#myBtnContainer span button {
+    font-size: 15px;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
 
 /* css cản phẩm */
 .product_img img {
     width: 210px;
     height: 200px;
     display: flex;
-
     justify-content: center;
     align-items: center;
     padding-bottom: 10px;
@@ -829,6 +904,10 @@ label.logo {
 }
 
 @media (max-width: 600px) {
+    #myBtnContainer span {
+        margin: 0;
+        padding: 0 10px;
+    }
 
     .shop_shopping {
         flex-wrap: wrap;
@@ -862,6 +941,25 @@ label.logo {
     display: inline-block;
 }
 
+.main2 {
+    border: none;
+    border-top: 1px dashed black;
+    width: 50%;
+    float: right;
+    line-height: 40px;
+}
+@media (max-width:390px) {
+    .main2 {
+        border: none;
+        border-top: 1px dashed black;
+        width: 100%;
+        float: none;
+        line-height: 40px;
+    }
+    .main img{
+        display: none;
+    }
+}
 .main img {
     padding: 0 60px;
     float: left;
@@ -870,6 +968,8 @@ label.logo {
 .main1 {
     line-height: 30px;
 }
+
+
 
 .main p {
 
@@ -902,7 +1002,7 @@ label.logo {
     .main p {
         position: unset;
     }
-
+ 
     .main {
         width: 100%;
         display: flex;
@@ -976,7 +1076,7 @@ label.logo {
     .logo_six {
         flex-wrap: wrap;
     }
-
+    
     .logo_six_image {
         justify-content: center;
         align-items: center;
@@ -1036,9 +1136,8 @@ label.logo {
     padding: 10px;
 }
 
-.from_about p
- {
-  color: #D16B7D;
+.from_about p {
+    color: #D16B7D;
 }
 
 @media(max-width:1200px) {
@@ -1049,7 +1148,7 @@ label.logo {
     .from_about input,
     .from_about textarea {
 
-        width: 380px;
+        width: 100%;
 
     }
 
@@ -1058,16 +1157,18 @@ label.logo {
         width: 100%;
     }
 }
+
 /* footer */
 footer {
     margin-top: 60px;
-    background-image: url('../images/background-remover/banner2.jpg');
+    background-image: url('../images/background-remover/tải\ xuống.jpg');
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     height: auto;
     position: absolute;
 }
+
 .ft_img {
 
     display: flex;
@@ -1077,6 +1178,7 @@ footer {
     font-size: 35px;
     padding: 10px;
 }
+
 .ft-text p {
     display: flex;
     flex-direction: column;
@@ -1085,6 +1187,7 @@ footer {
     line-height: initial;
     font-family: 'Montserrat', sans-serif;
 }
+
 @media (max-width: 768px) {
     .footer_ft>.ft {
         padding: 10px;
@@ -1102,6 +1205,7 @@ footer {
 
 
 }
+
 .ft_down {
     display: flex;
     justify-content: center;
@@ -1110,6 +1214,7 @@ footer {
     height: auto;
     background: #D16B7D;
 }
+
 .content_fl {
     margin: 10px;
     display: flex;
@@ -1123,6 +1228,7 @@ footer {
     color: white;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
 .ft_down_d {
     width: 33%;
     margin: 0 10px;
@@ -1139,6 +1245,7 @@ footer {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
+
 .slides_prodcuts {
 
     margin-top: 40px;
@@ -1146,22 +1253,26 @@ footer {
     display: flex;
     justify-content: center;
 }
+
 @media (max-width:820px) {
     .slides_prodcuts {
         flex-wrap: wrap;
     }
 }
+
 @media (max-width: 768px) {
     .product_ft {
         height: auto;
     }
 }
+
 .icon-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 
     padding: 10px;
 }
+
 .icon-square:hover {
     background-color: #D16B7D;
     /* Thay đổi màu nền khi hover */
@@ -1193,4 +1304,82 @@ footer {
     width: 210px;
     position: relative;
     margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .product_ft {
+        height: auto;
+    }
+}
+
+/* sô lượng giỏ hàng  */
+.sign-giohang {
+
+    margin-bottom: 10px;
+    color: black;
+    font-size: 30px;
+}
+
+.menu_navbar .cart-icon {
+    margin-top: 10px;
+}
+
+.cart-icon {
+    position: relative;
+    display: inline-block;
+
+}
+
+.item-count {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 4px 6px;
+    font-size: 13px;
+}
+
+@media (max-width:900px) {
+    .item-count {
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        background-color: red;
+        color: white;
+        border-radius: 50%;
+        padding: 4px 6px;
+        font-size: 18px;
+    }
+
+}
+
+/* test */
+.product_sort_con_show {
+    display: block;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    .content_box_p {
+
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 18px;
+        top: 50%;
+        left: 21%;
+        position: relative;
+    }
+
+    .showing_one {
+        margin-top: 10px;
+    }
+
+}
+/* không cho lướt trang */
+.overflow{
+    overflow: hidden;
 }
